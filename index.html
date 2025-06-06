@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My School Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header with logo and title -->
+ <!-- Header: scrolls with the page -->
+<header class="page-header">
+  <div class="brand">
+    <img src="image/logo.png" alt="School Logo" />
+    <div class="school-info">
+      <h1>Shree Baljyoti Secondary School</h1>
+      <p class="location">Hetauda-05, Piple</p>
+      <p class="estd">Established 2032 B.S.</p>
+    </div>
+  </div>
+</header>
+
+<!-- Navbar: sticky -->
+<nav class="navbar">
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="nav-links" id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Home Section / Gallery -->
+    <section id="home" class="gallery">
+      <h2>Photo Gallery</h2>
+      <!-- Campus Category -->
+  <div class="gallery-category">
+    <h3>🏫 School</h3>
+    <div class="gallery-grid">
+      <img src="image/school-building.jpg" alt="School Building" onclick="openLightbox(this.src)">
+      <img src="image/1.jpg" alt="Campus" onclick="openLightbox(this.src)">
+      <img src="image/2.jpg" alt="Campus" onclick="openLightbox(this.src)">
+      <div class="hidden">
+        <img src="image/3.jpg" alt="Campus" onclick="openLightbox(this.src)">
+        <img src="image/4.jpg" alt="Campus" onclick="openLightbox(this.src)">
+      </div>
+      <button class="toggle-btn" onclick="toggleGallery(this)">Show more</button>
+    </div>
+  </div>
+
+  <!-- Students Category -->
+  <div class="gallery-category">
+    <h3>👩‍🎓 Students</h3>
+    <div class="gallery-grid">
+      <img src="image/students.jpg" alt="Students" onclick="openLightbox(this.src)">
+      <img src="image/5.jpg" alt="Students" onclick="openLightbox(this.src)">
+      <div class="hidden">
+        <img src="image/6.jpg" alt="Students" onclick="openLightbox(this.src)">
+        <img src="image/7.jpg" alt="Students" onclick="openLightbox(this.src)">
+        <img src="image/13.jpg" alt="Event" onclick="openLightbox(this.src)">
+      </div>
+      <button class="toggle-btn" onclick="toggleGallery(this)">Show more</button>
+    </div>
+  </div>
+
+  <!-- Events Category -->
+  <div class="gallery-category">
+    <h3>🎉 Events</h3>
+    <div class="gallery-grid">
+      <img src="image/8.jpg" alt="Event" onclick="openLightbox(this.src)">
+      <img src="image/9.jpg" alt="Event" onclick="openLightbox(this.src)">
+      <div class="hidden">
+        <img src="image/10.jpg" alt="Event" onclick="openLightbox(this.src)">
+        <img src="image/11.jpg" alt="Event" onclick="openLightbox(this.src)">
+        <img src="image/12.jpg" alt="Event" onclick="openLightbox(this.src)">
+      </div>
+      <button class="toggle-btn" onclick="toggleGallery(this)">Show more</button>
+    </div>
+  </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>Our Mission</h2>
+      <p>We provide quality education and promote lifelong learning.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br />
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Enlarged Photo" />
+  </div>
+
+  <!-- Footer -->
+ <footer>
+  <p>&copy; 2025 My School. All rights reserved.</p>
+
+  <div class="contact-numbers">
+    <a href="tel:057-520145" class="contact-link">
+      <i class="fas fa-phone-alt"></i> 057-520145
+    </a>
+    <a href="tel:057-520246" class="contact-link">
+      <i class="fas fa-phone-alt"></i> 057-520246
+    </a>
+  </div>
+
+  <a href="https://www.facebook.com/profile.php?id=100076469664196" target="_blank" class="social-icon">
+    <i class="fab fa-facebook-square"></i> Follow us
+  </a>
+</footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
